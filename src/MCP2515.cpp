@@ -114,7 +114,9 @@ int MCP2515Class::begin(long baudRate)
     { (long)16E6,   (long)40E3, { 0x07, 0xff, 0x87 } },
     { (long)16E6,   (long)20E3, { 0x0f, 0xff, 0x87 } },
     { (long)16E6,   (long)10E3, { 0x1f, 0xff, 0x87 } },
-    { (long)16E6,    (long)5E3, { 0x3f, 0xff, 0x87 } }
+    { (long)16E6,    (long)5E3, { 0x3f, 0xff, 0x87 } },
+
+    { (long)20E6,  (long)500E3, { 0x00, 0xac, 0x07 } }
   };
 
   const uint8_t* cnf = NULL;
