@@ -1,6 +1,6 @@
 # Arduino CAN
 
-[![Build Status](https://travis-ci.org/sandeepmistry/arduino-CAN.svg?branch=master)](https://travis-ci.org/sandeepmistry/arduino-CAN)
+[![Build Status](https://travis-ci.org/nzottmann/arduino-CAN.svg?branch=master)](https://travis-ci.org/nzottmann/arduino-CAN)
 
 An Arduino library for sending and receiving data using CAN bus.
 
