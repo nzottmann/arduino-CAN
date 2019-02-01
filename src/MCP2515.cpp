@@ -114,7 +114,7 @@ int MCP2515Class::begin(long baudRate)
     { (long)16E6,   (long)40E3, { 0x07, 0xff, 0x87 } },
     { (long)16E6,   (long)20E3, { 0x0f, 0xff, 0x87 } },
     { (long)16E6,   (long)10E3, { 0x1f, 0xff, 0x87 } },
-    { (long)16E6,    (long)5E3, { 0x3f, 0xff, 0x87 } },
+    { (long)16E6,    (long)5E3, { 0x3f, 0xff, 0x87 } }
   };
 
   const uint8_t* cnf = NULL;
@@ -266,7 +266,7 @@ void MCP2515Class::onReceive(void(*callback)(int))
 
   if (callback) {
     SPI.usingInterrupt(digitalPinToInterrupt(_intPin));
-    attachInterrupt(digitalPinToInterrupt(_intPin), MCP2515Class::onInterrupt, LOW);
+    attachInterrupt(digitalPinToInterrupt(_intPin), MCP2515Class::onInterrupt, FALLING);
   } else {
     detachInterrupt(digitalPinToInterrupt(_intPin));
 #ifdef SPI_HAS_NOTUSINGINTERRUPT
