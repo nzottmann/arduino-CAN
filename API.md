@@ -33,18 +33,6 @@ CAN.setPins(cs, irq);
 
 This call is optional and only needs to be used if you need to change the default pins used.
 
-#### ESP32
-
-Override the default `CTX` and `CRX` pins used by the library. **Must** be called before `CAN.begin(...)`.
-
-```arduino
-CAN.setPins(rx, tx);
-```
- * `rx` - new CRX pin to use, defaults to `4`
- * `tx` - new CTX pin to use, defaults to `5`.
-
-This call is optional and only needs to be used if you need to change the default pins used.
-
 ### Set SPI Frequency
 
 **MCP2515 only**
@@ -56,7 +44,7 @@ CAN.setSPIFrequency(frequency);
 ```
  * `frequency` - new SPI frequency to use, defaults to `10E6`
 
-This call is optional and only needs to be used if you need to change the default SPI frequency used. Some logic level converters cannot support high speeds such as 10 MHz, so a lower SPI frequency can be selected with `CAN.setSPIFrequency(frequency)`.
+This call is optional and only needs to be used if you need to change the default SPI frequency used.
 
 ### Set Clock Frequency
 
